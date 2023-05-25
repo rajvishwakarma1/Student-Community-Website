@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Event calendar</title>
+        <link rel="stylesheet" href="styleevent.css">
+        <link rel="stylesheet" href="evo-calendar.min.css">
+        <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="hero">
+            <div id="calendar"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="evo-calendar.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#calendar').evoCalendar({
+                    theme:"Midnight Blue",
+                    calendarEvents: [
+                        {
+                            id: 'event 1',
+                            name: "New Year",
+                            date: "January/1/2024",
+                            description: "Wish you a happy new year",
+                            type: "holiday",
+                            everyYear: true
+                        },
+                        {
+                            id: 'event 2',
+                            name: "Submission Project",
+                            badge: { 
+                                text: "05/17 - 05/20"
+                            },
+                            date: ["May/17/2023", "May/20/2023"],
+                            description: "Project Submission & Practical.",
+                            type: "event",
+                            color: "#63d867",
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>
